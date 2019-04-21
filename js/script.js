@@ -3,17 +3,7 @@ Treehouse FSJS Techdegree:
 project 1 - A Random Quote Generator
 ******************************************/
 
-// Study guide for this project - https://drive.google.com/file/d/1s5grutGuQFwJcQP8bFwEI69Q8FCkGdDk/view?usp=sharing
-
-
-/*** 
-  Create the array of quote objects and name it `quotes`.
-  Add at least five quote objects to the `quotes` array.
-  Give each quote object a `quote` and `source` property.
-  Add the `citation` property to at least one object in the array.
-  Add the `year` property to at least one object in the array.
-  Use console.log() to log your array of quotes to the console.
-***/
+//Creating an array of quote objects.
 var quotes = [
 {quote: 'You miss 100 of the shots you don\'t take - Wayne Greski', source: "Michael Scott"},
 {quote: 'It\'s just a flesh wound', source:"The Black Knight", citation: "Monty Python and the Holy Grail"},
@@ -25,16 +15,15 @@ var quotes = [
 
 
 
-/***
-  Create the `getRandomQuote` function to:
-   - Create a variable to store a random number 
-   - Cse the random number to `return` a random quote object from the `quotes` array.
-  This function creates a random number according the number of objects in the array.
-***/
+// Functions for getting a random quote from an array
+
 function getRandomQuote (array){
   var randomNumber = Math.floor(Math.random()* array.length);
   return array[randomNumber];
 }
+
+//Function to get random background color
+
 function randomBackground () {
   var r = Math.floor(Math.random()*255);
   var g = Math.floor(Math.random()*255);
@@ -44,19 +33,7 @@ function randomBackground () {
  console.log(background);
 }
 
-/***
-  Create the `printQuote` function to: 
-   - Call the `getRandomQuote` function and assign it to a variable.
-   - Create a variable for the HTML string and set it equal to an empty string.
-   - Use the HTML template in the instructions or the markup in the index.html file, AND 
-     the random quote vairable to build your HTML string.
-   - Add the quote and source section to the HTML string.
-   - Use an if statement to check for the citation property before adding it to the HTML string.
-   - Use an if statement to check for the year property before adding it to the HTML string.
-   - Don't forget to close that final `p` tag.
-   - Set the `innerHTML` of the `quote-box` div to the HTML string. 
-   This function builds the quote objects in html by pulling from the properties of the objects.
-***/
+//Function to display random quote and build html.
 
 function printQuote (){
   randomBackground();
@@ -75,7 +52,7 @@ if (randomQuote.citation){
 
 document.getElementById("quote-box").innerHTML = html;
 }
-//document.body.style.background = 
+
 
 
 /***
@@ -87,6 +64,4 @@ document.getElementById("quote-box").innerHTML = html;
 
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
 
-
-// Remember to delete the comments that came with this file, and replace them with your own code comments.
 
