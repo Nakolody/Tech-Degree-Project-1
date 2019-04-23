@@ -52,8 +52,9 @@ if (randomQuote.citation){
 
 document.getElementById("quote-box").innerHTML = html;
 }
+// Calls function to change quote every 5 seconds.
 
-
+var interval = setInterval(printQuote, 5000);
 
 /***
   When the "Show another quote" button is clicked, the event listener 
