@@ -28,7 +28,8 @@ function randomBackground () {
   var r = Math.floor(Math.random()*255);
   var g = Math.floor(Math.random()*255);
   var b = Math.floor(Math.random()*255);
-  var background = "rgb(" + r + ", " + g + ", " + b + ")";
+  var background = `rgb(${r},${g},${b})`;
+  //var background = "rgb(" + r + ", " + g + ", " + b + ")";
  document.body.style.background = background;
  console.log(background);
 }
